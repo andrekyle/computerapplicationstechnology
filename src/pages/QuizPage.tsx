@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ArrowLeft, CheckCircle2, XCircle, GripVertical, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -432,33 +432,40 @@ const QuizPage = () => {
         return (
           <div>
             {question.labels ? (
-              <div className="space-y-3">
+              <div className="grid gap-x-3 gap-y-2" style={{ gridTemplateColumns: "auto 1fr auto" }}>
                 {question.labels.map((label, i) => {
                   const userVal = ((answers[question.id] as Record<string, string>) || {})[label] || "";
                   const acceptedAnswers = question.labelAnswers?.[label];
                   const isCorrect = submitted && acceptedAnswers ? acceptedAnswers.some(a => fuzzyMatch(userVal.trim(), a)) : false;
-                  const isWrong = submitted && !isCorrect && userVal.trim().length > 0;
-                  const isEmpty = submitted && userVal.trim().length === 0;
+                  const isWrong = submitted && acceptedAnswers && !isCorrect && userVal.trim().length > 0;
+                  const isEmpty = submitted && acceptedAnswers && !isCorrect && userVal.trim().length === 0;
                   return (
-                    <div key={label} className="flex items-center gap-3">
-                      <span className="text-sm font-semibold text-foreground w-6 shrink-0">{label}:</span>
-                      <input
-                        type="text"
-                        value={userVal}
-                        onChange={(e) => {
-                          if (submitted) return;
-                          const current = (answers[question.id] as Record<string, string>) || {};
-                          const updated = { ...current, [label]: e.target.value };
-                          setAnswers({ ...answers, [question.id]: updated });
-                        }}
-                        placeholder="Type answer..."
-                        className={`flex-1 rounded-xl border-2 bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none transition-colors ${
-                          isCorrect ? "border-success bg-success/5" : isWrong || isEmpty ? "border-destructive bg-destructive/5" : "border-border focus:border-primary"
-                        }`}
-                      />
-                      {isCorrect && <CheckCircle2 className="h-5 w-5 text-success shrink-0" strokeWidth={1} />}
-                      {(isWrong || isEmpty) && <XCircle className="h-5 w-5 text-destructive shrink-0" strokeWidth={1} />}
-                    </div>
+                    <React.Fragment key={label}>
+                      <span className="text-sm font-semibold text-foreground self-center whitespace-nowrap">{label}:</span>
+                      <div>
+                        <input
+                          type="text"
+                          value={userVal}
+                          onChange={(e) => {
+                            if (submitted) return;
+                            const current = (answers[question.id] as Record<string, string>) || {};
+                            const updated = { ...current, [label]: e.target.value };
+                            setAnswers({ ...answers, [question.id]: updated });
+                          }}
+                          placeholder="Type answer..."
+                          className={`w-full rounded-xl border-2 bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none transition-colors ${
+                            isCorrect ? "border-success bg-success/5" : isWrong || isEmpty ? "border-destructive bg-destructive/5" : "border-border focus:border-primary"
+                          }`}
+                        />
+                        {submitted && acceptedAnswers && !isCorrect && (
+                          <p className="mt-1 text-xs text-success italic">Correct: {acceptedAnswers[0]}</p>
+                        )}
+                      </div>
+                      <div className="self-center w-5">
+                        {isCorrect && <CheckCircle2 className="h-5 w-5 text-success" strokeWidth={1} />}
+                        {(isWrong || isEmpty) && <XCircle className="h-5 w-5 text-destructive" strokeWidth={1} />}
+                      </div>
+                    </React.Fragment>
                   );
                 })}
               </div>

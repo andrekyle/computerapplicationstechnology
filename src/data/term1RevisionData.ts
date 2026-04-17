@@ -102,6 +102,11 @@ export const term1RevisionQuiz3: { title: string; questions: QuizQuestion[] } = 
         "Study the picture of a computer setup below.\n\n" +
         "![Computer Setup](COMPUTER_SETUP_IMG)\n\n" +
         "Identify and name TWO input devices visible in the picture. (2 marks)",
+      labels: ["Device 1", "Device 2"],
+      labelAnswers: {
+        "Device 1": ["mouse", "keyboard", "touchscreen"],
+        "Device 2": ["mouse", "keyboard", "touchscreen"],
+      },
       explanation:
         "Mouse and Keyboard (also accept touchscreen). (2 marks)",
     },
@@ -130,6 +135,7 @@ export const term1RevisionQuiz3: { title: string; questions: QuizQuestion[] } = 
       type: "short-answer",
       question:
         "Your school has bought a new computer for the administration office. List TWO economic benefits of having a computer in the office. Explain how the school benefits in EACH case. (6 marks)",
+      labels: ["Benefit 1", "Explanation 1", "Benefit 2", "Explanation 2"],
       explanation:
         "Any TWO benefits with explanation for each:\n\n" +
         "• Saving paper — Notices can be sent to parents using email/WhatsApp; reports can be sent electronically.\n" +
@@ -172,6 +178,11 @@ export const term1RevisionQuiz3: { title: string; questions: QuizQuestion[] } = 
         "![IPC Diagram](IPC_DIAGRAM_IMG)\n\n" +
         "The diagram shows a user (1), Input (2), stage 3, Output (4), stage 5, and a storage/processor device (6).\n\n" +
         "Does stage 6 represent storage or communication? Give a reason for your answer. (2 marks)",
+      labels: ["Answer", "Reason"],
+      labelAnswers: {
+        "Answer": ["storage"],
+        "Reason": ["hard drive", "reading and writing", "to and from"],
+      },
       explanation:
         "Stage 6 represents STORAGE. The picture shows a storage device (hard drive). The arrows show that data is moving TO and FROM the device (reading and writing data). (2 marks)",
     },
@@ -180,6 +191,11 @@ export const term1RevisionQuiz3: { title: string; questions: QuizQuestion[] } = 
       type: "short-answer",
       question:
         "Your class teacher ticks off each morning who is present at school. At the end of the term, she determines how many times each learner was absent. This number is included in the learner's term report.\n\nUsing this scenario, explain the difference between data and information. (4 marks)",
+      labels: ["Data", "Information"],
+      labelAnswers: {
+        "Data": ["unprocessed", "ticks", "raw"],
+        "Information": ["processed", "total days absent", "meaning"],
+      },
       explanation:
         "The ticks on the class list/attendance register represent DATA — these are unprocessed facts. (2 marks)\n\n" +
         "The total days absent on the report represents INFORMATION — this was obtained by adding up (processing) the number of days absent. Information is processed data that has meaning and is useful. (2 marks)",
@@ -189,6 +205,7 @@ export const term1RevisionQuiz3: { title: string; questions: QuizQuestion[] } = 
       type: "short-answer",
       question:
         "When working on a computer used by more than one person, you are often asked to enter a username and password. Give TWO reasons why you should never share your password with anyone else. (2 marks)",
+      labels: ["Reason 1", "Reason 2"],
       explanation:
         "• Other people could access your files and tamper with them / delete them / steal your information.\n" +
         "• Other people could use the computer to carry out illegal or undesirable activities in your name, e.g., sending rude emails, accessing inappropriate content, cyberbullying.",
@@ -242,6 +259,13 @@ export const term1RevisionQuiz4: { title: string; questions: QuizQuestion[] } = 
         "Study the Windows 10 desktop image below:\n\n" +
         "![Windows Desktop](WINDOWS_DESKTOP_IMG)\n\n" +
         "Label the parts of the desktop labelled A, B, C and D. (4 marks)",
+      labels: ["A", "B", "C", "D"],
+      labelAnswers: {
+        "A": ["start button", "start"],
+        "B": ["taskbar", "task bar"],
+        "C": ["notification tray", "system tray"],
+        "D": ["start menu"],
+      },
       explanation:
         "A — Start button (1 mark)\n" +
         "B — Taskbar (1 mark)\n" +
@@ -280,6 +304,7 @@ export const term1RevisionQuiz4: { title: string; questions: QuizQuestion[] } = 
       id: 5,
       type: "short-answer",
       question: "Give FOUR tips to avoid eye strain when using a computer monitor. (4 marks)",
+      labels: ["Tip 1", "Tip 2", "Tip 3", "Tip 4"],
       explanation:
         "Any FOUR:\n" +
         "• Place the monitor at eye level.\n" +
@@ -295,6 +320,7 @@ export const term1RevisionQuiz4: { title: string; questions: QuizQuestion[] } = 
         "Study the correct sitting posture image below:\n\n" +
         "![Ergonomics](ERGONOMICS_IMG)\n\n" +
         "Mention at least FOUR points that you need to focus on for correct seating posture when using a computer. (4 marks)",
+      labels: ["Point 1", "Point 2", "Point 3", "Point 4"],
       explanation:
         "Any FOUR:\n" +
         "• Sit up straight with your back perpendicular to the ground.\n" +
@@ -310,6 +336,7 @@ export const term1RevisionQuiz4: { title: string; questions: QuizQuestion[] } = 
       type: "short-answer",
       question:
         "Each time Sipho saves a file, he saves it to the desktop of the computer. His desktop is very cluttered, and he has trouble finding files.\n\nAdvise Sipho on a more effective way to organise his files. (4 marks)",
+      labels: ["Advice 1", "Advice 2", "Advice 3", "Advice 4"],
       explanation:
         "Sipho should:\n" +
         "• Create folders with meaningful names that suggest what type of file is stored in them.\n" +
@@ -324,6 +351,12 @@ export const term1RevisionQuiz4: { title: string; questions: QuizQuestion[] } = 
         "Fred created a folder called 'Grade 10 PAT' on a school computer. The folder location is:\nc:\\users\\Fred\\documents\\Grade 10\\Grade 10 PAT\n\nStudy the folder tree diagram below:\n\n" +
         "![Folder Tree](FOLDER_TREE_IMG)\n\n" +
         "Write down the folder names of folders A, B and C. (3 marks)",
+      labels: ["A", "B", "C"],
+      labelAnswers: {
+        "A": ["documents"],
+        "B": ["grade 10"],
+        "C": ["grade 10 pat", "pat"],
+      },
       explanation:
         "A — Documents (1 mark)\n" +
         "B — Grade 10 (1 mark)\n" +
@@ -364,6 +397,7 @@ export const term1RevisionQuiz5: { title: string; questions: QuizQuestion[] } = 
       type: "short-answer",
       question:
         "Word-processing applications have several uses. List any TWO uses of a word processor. (2 marks)",
+      labels: ["Use 1", "Use 2"],
       explanation:
         "Any TWO:\n" +
         "• Word processors can be used to create documents (letters, reports, essays).\n" +
@@ -401,6 +435,7 @@ export const term1RevisionQuiz5: { title: string; questions: QuizQuestion[] } = 
       type: "short-answer",
       question:
         "Briefly explain WHEN you would use the 'Save As' option, compared to when you would use the 'Save' option. (3 marks)",
+      labels: ["Save As", "Save"],
       explanation:
         "The 'Save As' option is used when:\n" +
         "• Saving in a different location (folder or drive).\n" +
@@ -459,6 +494,7 @@ export const term1RevisionQuiz5: { title: string; questions: QuizQuestion[] } = 
         "2.4.3 Replace green highlighting with light paragraph shading.\n" +
         "2.4.4 Add a red paragraph border with a width of 2¼ pt.\n\n" +
         "Explain how you would carry out step 2.4.2 (change the line spacing to 1.5) in Microsoft Word. (2 marks)",
+      labels: ["Step 1", "Step 2"],
       explanation:
         "To change line spacing to 1.5 in Microsoft Word:\n" +
         "1. Select the paragraph.\n" +
@@ -471,6 +507,7 @@ export const term1RevisionQuiz5: { title: string; questions: QuizQuestion[] } = 
       type: "short-answer",
       question:
         "Explain the difference between a hanging indent and a first-line indent in a word processor. (2 marks)",
+      labels: ["Hanging indent", "First-line indent"],
       explanation:
         "A FIRST-LINE INDENT indents only the first line of a paragraph to the right.\n\n" +
         "A HANGING INDENT indents all lines of a paragraph EXCEPT the first line. The first line stays at the margin while the remaining lines are indented. This is commonly used in bibliographies and reference lists.",
@@ -494,8 +531,7 @@ export const term1RevisionQuiz5: { title: string; questions: QuizQuestion[] } = 
       id: 9,
       type: "short-answer",
       question:
-        "In Word, explain how to change a hyphen (-) to an en dash (–). (2 marks)",
-      explanation:
+        "In Word, explain how to change a hyphen (-) to an en dash (–). (2 marks)",      labels: ["Step 1", "Step 2"],      explanation:
         "To change a hyphen to an en dash:\n" +
         "1. Select the hyphen in the text.\n" +
         "2. Go to Insert tab → Symbol → More Symbols.\n" +

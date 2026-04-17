@@ -75,6 +75,7 @@ export const grade10Quizzes: TopicQuizzes = {
           id: 4, type: "short-answer",
           question: "Explain the difference between hardware and software. Give one example of each.",
           correctAnswer: "hardware software",
+          labels: ["Hardware", "Hardware example", "Software", "Software example"],
           explanation: "Hardware refers to the physical components of a computer that you can touch (e.g., keyboard, monitor, motherboard). Software refers to programs and instructions that tell the hardware what to do (e.g., Microsoft Windows, Google Chrome).",
         },
         {
@@ -122,6 +123,7 @@ export const grade10Quizzes: TopicQuizzes = {
           id: 10, type: "short-answer",
           question: "What does the acronym GUI stand for, and why is it important?",
           correctAnswer: "graphical user interface",
+          labels: ["Acronym", "Importance"],
           explanation: "GUI stands for Graphical User Interface. It is important because it allows users to interact with the computer using visual elements like windows, icons, menus, and pointers instead of typing text commands, making computers easier and more intuitive to use.",
         },
       ],
@@ -167,6 +169,7 @@ export const grade10Quizzes: TopicQuizzes = {
           id: 5, type: "short-answer",
           question: "Name three output devices and explain what each does.",
           correctAnswer: "output",
+          labels: ["Device 1", "Device 2", "Device 3"],
           explanation: "Three output devices: (1) Monitor — displays visual information from the computer. (2) Printer — produces a hard copy (printout) of digital documents. (3) Speakers — output audio/sound from the computer.",
         },
         {
@@ -236,6 +239,7 @@ export const grade10Quizzes: TopicQuizzes = {
           id: 4, type: "short-answer",
           question: "What is the difference between RAM and ROM? Give a use for each.",
           correctAnswer: "RAM ROM",
+          labels: ["RAM", "RAM use", "ROM", "ROM use"],
           explanation: "RAM (Random Access Memory) is volatile — it temporarily stores data being actively used and loses contents when powered off. Used for running programs. ROM (Read-Only Memory) is non-volatile — it permanently stores essential startup instructions. Used for BIOS/firmware.",
         },
         {
@@ -293,6 +297,7 @@ export const grade10Quizzes: TopicQuizzes = {
           id: 4, type: "short-answer",
           question: "Explain why a computer needs both RAM and a hard drive.",
           correctAnswer: "RAM hard drive",
+          labels: ["RAM", "Hard drive"],
           explanation: "A computer needs RAM for fast temporary storage of data being actively used — it allows the CPU to quickly access running programs. The hard drive provides permanent storage for all files, programs, and the operating system. RAM is fast but volatile; the hard drive is slower but retains data when powered off.",
         },
         {
@@ -340,6 +345,7 @@ export const grade10Quizzes: TopicQuizzes = {
           id: 3, type: "short-answer",
           question: "What is the difference between proprietary software and open-source software?",
           correctAnswer: "proprietary open-source",
+          labels: ["Proprietary software", "Open-source software"],
           explanation: "Proprietary software is owned by a company, requires a licence/purchase, and its source code is hidden (e.g., Microsoft Office). Open-source software is free to use, and its source code is publicly available for anyone to view, modify, and distribute (e.g., LibreOffice, Linux).",
         },
         {
@@ -393,6 +399,7 @@ export const grade11Quizzes: TopicQuizzes = {
           id: 3, type: "short-answer",
           question: "Explain the difference between parallel and serial data transmission.",
           correctAnswer: "parallel serial",
+          labels: ["Parallel", "Serial"],
           explanation: "Parallel transmission sends multiple bits simultaneously along multiple wires (faster over short distances but prone to interference). Serial transmission sends one bit at a time along a single wire (more reliable over long distances, e.g., USB, SATA).",
         },
       ],
@@ -520,6 +527,7 @@ export const grade12Quizzes: TopicQuizzes = {
           id: 3, type: "short-answer",
           question: "Explain the concept of the 'digital divide' and give two ways it can be addressed.",
           correctAnswer: "digital divide",
+          labels: ["Concept", "Way 1", "Way 2"],
           explanation: "The digital divide refers to the gap between people who have access to technology and the internet and those who do not, often due to economic, geographic, or educational factors. It can be addressed by: (1) Government initiatives providing free Wi-Fi and computer labs in underserved areas, (2) Subsidising affordable devices for low-income households.",
         },
       ],
